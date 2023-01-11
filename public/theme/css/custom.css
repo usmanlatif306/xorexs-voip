@@ -1,0 +1,80 @@
+.text-theme {
+    color: #ac0404 !important;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.coupon input[type="text"] {
+    width: 300px !important;
+}
+.payment-form {
+    display: block !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.btn-blue {
+    background: #010f54 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 30px;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+}
+.logo img {
+    width: 90% !important;
+}
+.icon__circle {
+    background: #bd4e45;
+    color: #fff;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 100px;
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
+    text-align: center;
+    padding: 9px 0;
+    box-shadow: 0 0 15px 0px rgb(50 50 50 / 20%);
+    transition: 0.3s;
+    line-height: 25px;
+}
+
+.carousel-control-prev {
+    left: -110px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+.carousel-control-next {
+    right: -110px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #fff;
+}
+.active {
+    color: #e05941 !important;
+}

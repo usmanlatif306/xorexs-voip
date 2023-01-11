@@ -1,0 +1,319 @@
+.bg-genix,
+.bg-primary {
+    background: #1d345e !important;
+    color: #fff !important;
+}
+.bg-orange {
+    background: #ffac1c !important;
+}
+.bg-orange a:hover,
+.bg-white a:hover {
+    color: black !important;
+}
+.card-header a,
+.card-header a:hover {
+    color: white !important;
+}
+.text-genix,
+.text-primary {
+    color: #1d345e !important;
+}
+.border-genix {
+    border: 1px solid #1d345e;
+}
+.border-top-genix {
+    border-top: 1px solid #1d345e;
+}
+.border-bottom-genix,
+.btn-primary {
+    border-bottom: 1px solid #1d345e;
+}
+.btn-orange {
+    background-color: #ffac1c !important;
+    color: white !important;
+    border-color: #ffac1c !important;
+}
+.btn-genix,
+.btn-primary {
+    background-color: #1d345e !important;
+    color: white !important;
+    border-color: #1d345e !important;
+}
+.btn-genix:hover,
+.btn-primary:hover {
+    background-color: #0c2e6d !important;
+}
+.card-header {
+    background-color: #1d345e !important;
+}
+.card-header h4,
+.card-header h5,
+.card-header span {
+    color: #fff !important;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item.active,
+.sidebar .nav .nav-item.active > .nav-link,
+.sidebar .nav .nav-item.active > .nav-link:hover,
+.sidebar-icon-only .sidebar .nav .nav-item .nav-link:hover {
+    background: #1d345e !important;
+    color: #fff !important;
+}
+.fc .fc-button-primary {
+    background-color: #1d345e !important;
+    color: white !important;
+}
+.page-link.active,
+.active > .page-link {
+    color: #fff !important;
+    background-color: #1d345e !important;
+    border-color: #1d345e !important;
+}
+.page-link {
+    color: #1d345e !important;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.text-black-original {
+    color: #1f1f1f !important;
+}
+.width-res {
+    width: 50% !important;
+}
+.img-circle {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+}
+.img-circle-sm {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+}
+.fw-semibold {
+    font-weight: 600 !important;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.fs-25 {
+    font-size: 25px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.fs-40 {
+    font-size: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.modal-header .close {
+    margin: -25px -15px -25px auto;
+}
+.form-control-xs {
+    height: 2rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.card-header {
+    border-radius: 0px !important;
+}
+.card {
+    border-radius: 10px !important;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent !important;
+    border: none !important;
+}
+.dashboard-carousel {
+    max-height: 300px !important;
+    /* object-fit: fill; */
+}
+
+.support {
+    width: 100%;
+}
+/* .support img, */
+.support video {
+    width: 100%;
+    height: 100px;
+}
+.support img {
+    width: 90%;
+    height: 100px;
+    object-fit: contain;
+}
+/* task file delete icon */
+/* service task image and videos start */
+.service-task img {
+    object-fit: contain;
+}
+.service-task img,
+.service-task video {
+    width: 30%;
+    height: 100px;
+}
+/* service task image and videos end */
+
+.delete-task,
+.delete-task-video {
+    opacity: 90%;
+    top: -5px;
+    right: 8px;
+    transition: opacity 0.2s ease-out;
+}
+.delete-task-video {
+    right: -30px;
+}
+.delete-task:hover {
+    opacity: 100%;
+}
+/* image click popup show start */
+.img-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.model-img {
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.model-img:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.popup-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.popup-modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 65px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* image click popup show end */
+@media (min-width: 992px) {
+    .sidebar-icon-only .sidebar {
+        width: 50px !important;
+    }
+    .sidebar-icon-only .main-panel {
+        width: calc(100% - 50px);
+    }
+}
+
+.scroll-section {
+    overflow-x: scroll !important;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-section {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.bg-genix .btn-outline-dark,
+.btn-genix,
+.btn-primary {
+    border-color: #fff !important;
+}

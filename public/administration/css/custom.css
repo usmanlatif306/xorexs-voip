@@ -1,0 +1,54 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .card-header {
+    padding: 10px 20px !important;
+}
+.fixed-button.active {
+    display: none !important;
+}
+.pointer {
+    cursor: pointer;
+}
+.order-modal {
+    max-width: 50% !important;
+}
+.invalid {
+    color: #d9534f !important;
+    font-weight: 500 !important;
+}
+.ck-content {
+    height: 300px;
+}
+.font-large {
+    font-size: 18px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.fs-25 {
+    font-size: 25px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.semibold {
+    font-weight: 600;
+}
+.btn-sm {
+    border-radius: 15px !important;
+    padding: 6px 10px !important;
+}

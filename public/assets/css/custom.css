@@ -1,0 +1,55 @@
+/* .card-header {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+} */
+.card-header:first-child {
+    border-radius: calc(0.1rem - -18px) calc(0.1rem - -18px) 0 0 !important;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.fs-25 {
+    font-size: 25px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.menu-icons {
+    margin-left: auto;
+    margin-right: 0;
+    color: #686868;
+}
+.count-number {
+    position: absolute;
+    left: 60%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4b49ac;
+    top: -5px;
+    border: 1px solid #ffffff;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px;
+}
+.radio-label-cart {
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 25%;
+}
+.pay-img-cart {
+    width: 15%;
+    margin-left: 15%;
+}
