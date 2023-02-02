@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-lg-6 col-xl-7 col-md-6 col-sm-6 col-12">
                             <div class="slide__fornt__img">
-                                <img src="{{ asset('theme/images/banner/s1.png') }}" alt="voopo voip">
+                                <img src="{{ asset('theme/images/banner/s1.webp') }}" alt="voopo voip">
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="thumb">
-                        <img src="{{ asset('theme/images/about/s1.png') }}" alt="voopo voip">
+                        <img src="{{ asset('theme/images/about/s1.webp') }}" alt="voopo voip">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12 sm__mt--40">
@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="shape--1">
-            <img src="{{ asset('theme/images/about/soft1.png') }}" alt="voopo voip">
+            <img src="{{ asset('theme/images/about/soft1.webp') }}" alt="voopo voip">
         </div>
     </div>
     <!-- End Voopo Software -->

@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12 col-xl-6">
                     <div class="thumb">
-                        <img src="{{ asset('theme/images/about/ser1.jpg') }}" alt="voopo voip">
+                        <img src="{{ asset('theme/images/about/ser1.webp') }}" alt="voopo voip">
                     </div>
                 </div>
             </div>

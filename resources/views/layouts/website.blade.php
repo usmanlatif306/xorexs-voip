@@ -19,7 +19,15 @@
         }
 
         .bg-image--1 {
-            background-image: url("theme/images/bg/1.jpg") !important;
+            background-image: url("theme/images/bg/1.webp") !important;
+        }
+
+        .bg-image--5 {
+            background-image: url("theme/images/bg/5.webp") !important;
+        }
+
+        .bg-image--6 {
+            background-image: url("theme/images/bg/6.webp") !important;
         }
     </style>
     @vite(['resources/sass/app.scss'])
@@ -188,6 +196,7 @@
     <script src="{{ asset('theme/js/vendor/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('theme/js/popper.min.js') }}"></script>
     <script src="{{ asset('theme/js/bootstrap.min.js') }}"></script>
+
     <script src="{{ asset('theme/js/plugins.js') }}"></script>
     <script src="{{ asset('theme/js/active.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

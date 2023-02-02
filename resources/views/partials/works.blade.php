@@ -64,6 +64,6 @@
         </div>
     </div>
     <div class="thumb__poss">
-        <img src="{{ asset('theme/images/about/shape.png') }}" alt="voip voopo">
+        <img src="{{ asset('theme/images/about/shape.webp') }}" alt="voip voopo">
     </div>
 </div>

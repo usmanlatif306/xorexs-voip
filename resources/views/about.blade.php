@@ -10,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="thumb">
-                        <img src="{{ asset('theme/images/about/s1.png') }}" alt="voopo voip">
+                        <img src="{{ asset('theme/images/about/s1.webp') }}" alt="voopo voip">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12 sm__mt--40">
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="about--thumb">
-            <img src="{{ asset('theme/images/about/about.png') }}" alt="voopo voip">
+            <img src="{{ asset('theme/images/about/about.webp') }}" alt="voopo voip">
         </div>
     </div>
     <!-- End About Area -->
