@@ -8,18 +8,24 @@ namespace App\Services;
  */
 class SettingService
 {
-    public static function general()
+    public function general()
     {
-        $general = [
+        return [
             'app_name' => 'input',
             'app_url' => 'input',
             'app_environment' => 'input',
             'app_debug' => 'input',
             'currency_code' => 'input',
             'currency_sign' => 'input',
+            'show_app_name_in_title' => 'input',
+            'title_separator' => 'input',
         ];
+    }
 
-        $payment = [
+    public function payment()
+    {
+
+        return [
             'STRIPE_KEY' => config('services.stripe.public_key'),
             'STRIPE_SECRET' => config('services.stripe.secret_key'),
             'PAYPAL_MODE' => config('services.paypal.mode'),
@@ -28,8 +34,12 @@ class SettingService
             'PAYPAL_LIVE_CLIENT_ID' => config('services.paypal.live_client_id'),
             'PAYPAL_LIVE_CLIENT_SECRET' => config('services.paypal.live_client_secret'),
         ];
+    }
 
-        $social = [
+    public function social()
+    {
+
+        return [
             'GOOGLE_CLIENT_ID' => config('services.google.client_id'),
             'GOOGLE_CLIENT_SECRET' => config('services.google.client_secret'),
             'FACEBOOK_APP_ID' => config('services.facebook.client_id'),
@@ -37,8 +47,10 @@ class SettingService
             'RECAPTCHA_SITE_KEY' => config('services.recaptcha.site_key'),
             'RECAPTCHA_SECRET_KEY' => config('services.recaptcha.secret_key'),
         ];
-
-        $email = [
+    }
+    public function email()
+    {
+        return [
             'MAIL_MAILER' => config('mail.default'),
             'MAIL_HOST' => config('mail.mailers.smtp.host'),
             'MAIL_PORT' => config('mail.mailers.smtp.port'),
@@ -46,13 +58,6 @@ class SettingService
             'MAIL_PASSWORD' => config('mail.mailers.smtp.password'),
             'MAIL_ENCRYPTION' => config('mail.mailers.smtp.encryption'),
             'MAIL_FROM_ADDRESS' => config('mail.from.address'),
-        ];
-
-        return [
-            'general' => $general,
-            'payment' => $payment,
-            'social' => $social,
-            'email' => $email,
         ];
     }
 }

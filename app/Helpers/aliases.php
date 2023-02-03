@@ -2,8 +2,9 @@
 
 use App\Services\CartServices;
 use App\Services\PackageService;
+use App\Services\SeoService;
 
-// get stripe instance 
+// get stripe instance
 if (!function_exists('stripe')) {
     function stripe()
     {
@@ -11,7 +12,7 @@ if (!function_exists('stripe')) {
     }
 }
 
-// get stripe package service instance 
+// get stripe package service instance
 if (!function_exists('package')) {
     function package()
     {
@@ -19,10 +20,18 @@ if (!function_exists('package')) {
     }
 }
 
-// get cart service instance 
+// get cart service instance
 if (!function_exists('cart')) {
     function cart()
     {
         return (new CartServices());
+    }
+}
+
+// load seo service load function
+if (!function_exists('load_seo')) {
+    function load_seo($page)
+    {
+        return (new SeoService())->load($page);
     }
 }

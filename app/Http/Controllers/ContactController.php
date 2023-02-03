@@ -12,6 +12,7 @@ class ContactController extends Controller
      */
     public function index()
     {
+        load_seo('contact_page');
         return view('contact');
     }
 

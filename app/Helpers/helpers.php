@@ -17,7 +17,7 @@ if (!function_exists('setting')) {
 if (!function_exists('updatedAt')) {
     function updatedAt($key)
     {
-        return Setting::where('key', $key)->first()?->updated_at;
+        return Setting::where('key', $key)->first()?->updated_at ?? now();
     }
 }
 
@@ -35,7 +35,7 @@ if (!function_exists('billing_periods')) {
     }
 }
 
-// get package billing period 
+// get package billing period
 if (!function_exists('billing_duration')) {
     function billing_duration($duration)
     {
@@ -46,7 +46,7 @@ if (!function_exists('billing_duration')) {
     }
 }
 
-// get expiring date when subscribing to new package 
+// get expiring date when subscribing to new package
 if (!function_exists('expired_at')) {
     function expired_at($duration)
     {
@@ -81,5 +81,17 @@ if (!function_exists('subscription')) {
     function subscription()
     {
         return request()->user()->subscriptions()->count() > 0 ? true : false;
+    }
+}
+
+// get title from slug
+if (!function_exists('get_title')) {
+    function get_title($slug)
+    {
+        if (str()->contains($slug, '-')) {
+            return ucwords(str_replace('-', ' ', $slug));
+        } else {
+            return ucwords(str_replace('_', ' ', $slug));
+        }
     }
 }

@@ -23,7 +23,8 @@ class DashboardController extends Controller
         $users = User::where('role_id', Roles::USER);
         // top bar statistics
         $data['total_earnings'] = Order::sum('price');
-        $data['subscriptions_count'] = Subscription::count();
+        // $data['subscriptions_count'] = Subscription::count();
+        $data['subscriptions_count'] = 0;
         $data['orders_count'] = Order::count();
         $data['users_count'] = $users->count();
 

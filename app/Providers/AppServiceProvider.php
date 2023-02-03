@@ -34,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.admin', function ($view) {
             $view->with([
                 'pages' => ['terms-conditions', 'privacy-policy', 'cencellation-policy', 'cookies-policy'],
+                'seo_pages' => ['homepage', 'about_page', 'services_page', 'contact_page', 'faq_page', 'work_page', 'terms-conditions', 'privacy-policy', 'cencellation-policy', 'cookies-policy'],
+                'settings' => ['general', 'payment', 'social', 'email']
             ]);
         });
 

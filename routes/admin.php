@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SubscriptionController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/login', [AuthController::class, 'showlogin'])->name('admin.login');
 Route::get('/admin/forget-password', [AuthController::class, 'forget'])->name('admin.forget');
 Route::get('/admin/reset-password/{token}', [AuthController::class, 'reset'])->name('admin.reset');
-// 'middleware' => 'admin', 
+// 'middleware' => 'admin',
 // Admin Routes
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -56,10 +57,15 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
         Route::resource('pages', PageController::class)->only(['edit', 'update']);
     });
 
+    // Routes for seo
+    Route::group(['prefix' => 'seo'], function () {
+        Route::get('{page}', [SeoController::class, 'edit'])->name('seo.page');
+        Route::post('{page}/update', [SeoController::class, 'update'])->name('seo.update');
+    });
+
     // Setting routes
     Route::group(['prefix' => 'settings', 'as' => 'settings.'], function () {
-        // general
-        Route::get('/', [SettingController::class, 'index'])->name('index');
+        Route::get('/{type}', [SettingController::class, 'index'])->name('index');
         Route::post('update', [SettingController::class, 'update'])->name('update');
         Route::post('env', [SettingController::class, 'env'])->name('env');
         Route::post('email/test', [SettingController::class, 'email'])->name('email');

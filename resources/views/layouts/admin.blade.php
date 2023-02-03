@@ -2,7 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title') || {{ config('app.name', 'Laravel') }}</title>
+    @php
+        if (setting('show_app_name_in_title') === 'yes') {
+            $sub_title = ' ' . setting('title_separator') . ' ' . setting('app_name');
+        } else {
+            $sub_title = '';
+        }
+    @endphp
+    <title>@yield('title'){{ $sub_title }}</title>
     <!-- Meta -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />

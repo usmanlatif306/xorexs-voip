@@ -17,11 +17,11 @@ class SettingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($type)
     {
-        $data = (new SettingService())->general();
+        $data = (new SettingService())->$type();
 
-        return view('admin.settings.index', compact('data'));
+        return view('admin.settings.index', compact('data', 'type'));
     }
 
     /**
@@ -33,7 +33,7 @@ class SettingController extends Controller
     public function update(Request $request)
     {
         // updating record in db
-        foreach ($request->only(['app_name', 'currency_code', 'currency_sign', 'app_url'])  as $key => $value) {
+        foreach ($request->only(['app_name', 'currency_code', 'currency_sign', 'app_url', 'show_app_name_in_title', 'title_separator'])  as $key => $value) {
             Setting::updateOrCreate([
                 'key' => $key
             ], [

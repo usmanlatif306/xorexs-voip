@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Livewire\Website\About;
 use App\Http\Livewire\Website\Homepage;
@@ -21,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.xml');
+
 Route::get('/', [WebsiteController::class, 'home'])->name('homepage');
 Route::get('about-us', [WebsiteController::class, 'about'])->name('about_page');
 Route::get('services', [WebsiteController::class, 'services'])->name('services_page');
@@ -28,6 +31,7 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact_page')
 Route::post('contact', [ContactController::class, 'send'])->name('send_message');
 Route::get('faqs', [WebsiteController::class, 'faqs'])->name('faq_page');
 Route::get('how-it-works', [WebsiteController::class, 'works'])->name('work_page');
+Route::get('/{page}', [WebsiteController::class, 'page'])->name('policy_page');
 
 Route::post('save-order', [OrderController::class, 'saveOrder'])->name('order.save');
 Route::post('order/city', [OrderController::class, 'orderCity'])->name('order.city');

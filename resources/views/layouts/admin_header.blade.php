@@ -174,7 +174,7 @@
                                 profile-notification
                             ">
                         <li class="waves-effect waves-light">
-                            <a href="#!">
+                            <a href="{{ route('admin.settings.index', 'general') }}">
                                 <i class="ti-settings"></i>
                                 Settings
                             </a>

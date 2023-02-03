@@ -15,7 +15,7 @@
                 <ul>
                     <li class="more-details">
                         <a href="{{ route('admin.profile') }}"><i class="ti-user"></i>View Profile</a>
-                        <a href="#!"><i class="ti-settings"></i>Settings</a>
+                        <a href="{{ route('admin.settings.index', 'general') }}"><i class="ti-settings"></i>Settings</a>
                         <a href="javascript:void(0)" onclick="document.getElementById('logout').submit();"><i
                                 class="ti-power-off"></i>Logout</a>
                     </li>
@@ -102,7 +102,30 @@
                             <a href="{{ route('admin.pages.edit', $page) }}" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                 <span class="pcoded-mtext"
-                                    data-i18n="nav.basic-components.breadcrumbs">{{ ucwords(str_replace('-', ' ', $page)) }}</span>
+                                    data-i18n="nav.basic-components.breadcrumbs">{{ get_title($page) }}</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>
+                    @endforeach
+
+                </ul>
+            </li>
+
+            <!-- Website Seo -->
+            <li class="pcoded-hasmenu {{ request()->is('admin/seo*') ? 'active pcoded-trigger' : '' }}">
+                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="fa fa-file-word-o"></i></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Website SEO</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+                <ul class="pcoded-submenu">
+
+                    @foreach ($seo_pages as $page)
+                        <li class="{{ request()->segment(3) == $page ? 'active' : '' }}">
+                            <a href="{{ route('admin.seo.page', $page) }}" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                <span class="pcoded-mtext"
+                                    data-i18n="nav.basic-components.breadcrumbs">{{ get_title($page) }}</span>
                                 <span class="pcoded-mcaret"></span>
                             </a>
                         </li>
@@ -112,12 +135,25 @@
             </li>
 
             <!-- System Setting -->
-            <li class="{{ request()->routeIs('admin.settings.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.settings.index') }}" class="waves-effect waves-dark">
-                    <span class="pcoded-micon"><i class="ti-settings"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Settings</span>
+            <li class="pcoded-hasmenu {{ request()->is('admin/settings*') ? 'active pcoded-trigger' : '' }}">
+                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-settings"></i></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Settings</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
+                <ul class="pcoded-submenu">
+                    @foreach ($settings as $setting)
+                        <li class="{{ request()->segment(3) == $setting ? 'active' : '' }}">
+                            <a href="{{ route('admin.settings.index', $setting) }}" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                <span class="pcoded-mtext"
+                                    data-i18n="nav.basic-components.breadcrumbs">{{ get_title($setting) }}</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>
+                    @endforeach
+
+                </ul>
             </li>
 
             <!-- Profile -->
